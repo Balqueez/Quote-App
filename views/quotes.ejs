@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Quotes</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f7fb;
+      padding: 2rem;
+    }
+    .quote {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .quote h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .quote p {
+      margin: 0.5rem 0 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Submitted Quotes</h1>
+  <% quotes.forEach(q => { %>
+    <div class="quote">
+      <h3><%= q.name %></h3>
+      <p>"<%= q.quote %>"</p>
+    </div>
+  <% }) %>
+</body>
+</html>
